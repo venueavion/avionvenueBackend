@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Supabase Test</title>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <script>
+      // Replace with your actual credentials
+      const SUPABASE_URL = 'https://nnrynmpwnlhinoxwovkn.supabase.co';
+      const SUPABASE_KEY = 'your-anon-public-key';
+
+      const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+      async function testConnection() {
+        try {
+          const { data, error } = await supabase
+            .from('slideshow_images')
+            .select('*')
+            .limit(1);
+
+          if (error) throw error;
+          console.log('Connection successful! Data:', data);
+          alert('Success! Check browser console (F12)');
+        } catch (err) {
+          console.error('Connection failed:', err);
+          alert('Error: ' + err.message);
+        }
+      }
+
+      testConnection();
+    </script>
+  </body>
+</html>

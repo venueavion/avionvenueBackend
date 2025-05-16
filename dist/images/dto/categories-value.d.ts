@@ -1,0 +1,25 @@
+declare const ValidCategories: {
+    readonly TRAINING_DASHBOARD: "training_dashboard";
+    readonly TRAINING_GALLERY: "training_gallery";
+    readonly TRAINING_SLIDER: "training_slider";
+    readonly TRAINING_ANIMATE: "training_animate";
+    readonly WEDDING_DASHBOARD: "wedding_dashboard";
+    readonly WEDDING_GALLERY: "wedding_gallery";
+    readonly WEDDING_SLIDER: "wedding_slider";
+    readonly WEDDING_ANIMATE: "wedding_animate";
+    readonly CHURCH_DASHBOARD: "church_dashboard";
+    readonly CHURCH_GALLERY: "church_gallery";
+    readonly CHURCH_SLIDER: "church_slider";
+    readonly CHURCH_ANIMATE: "church_animate";
+    readonly PARTIES_DASHBOARD: "parties_dashboard";
+    readonly PARTIES_GALLERY: "parties_gallery";
+    readonly PARTIES_SLIDER: "parties_slider";
+    readonly PARTIES_ANIMATE: "parties_animate";
+    readonly PRIVATE_HIRE_DASHBOARD: "privateHire_dashboard";
+    readonly PRIVATE_HIRE_GALLERY: "privateHire_gallery";
+    readonly PRIVATE_HIRE_SLIDER: "privateHire_slider";
+    readonly PRIVATE_HIRE_ANIMATE: "privateHire_animate";
+};
+export type CategoryKey = keyof typeof ValidCategories;
+export type CategoryValue = typeof ValidCategories[CategoryKey];
+export {};
